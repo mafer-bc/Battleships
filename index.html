@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Battleships</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		
+	</head>
+	
+	<body>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="js/game.js"></script>
+		<script src="js/map.js"></script>
+		<script src="js/fleet.js"></script>
+		<script src="js/ship.js"></script>
+		<script src="js/buzz.js"></script>
+		
+		<div id= "main-container">
+		
+			<div id="logo"></div>
+			
+			<div id="button-easy" class="button" style="top:470px;background-image:url(../battleships/images/easy.png);"></div>
+			<div id="button-med" class="button" style="top:545px;background-image:url(../battleships/images/medium.png);"></div>
+			<div id="button-hard" class="button" style="top:625px;background-image:url(../battleships/images/hard.png);"></div>
+			
+			<div id="player-info">
+				
+				<div class="sunk" id=S0 style="top:38px;"></div>
+				<div class="sunk" id=S1 style="top:88px;"></div>
+				<div class="sunk" id=S2 style="top:138px;"></div>
+				<div class="sunk" id=S3 style="top:188px;"></div>
+				<div class="sunk" id=S4 style="top:238px;"></div>
+				<div id="shots"></div>
+				<div class="score"></div>
+				<div class="button-again"></div>
+			
+			</div>
+			
+		</div>
+		
+		<div id="instructions"> </div>
+		
+		<div class="feedback" id="lose" style="background-image:url(../battleships/images/lose.jpg);"> 
+			
+			<div class="score" style="font-size:60px; top:490px; left:0px; right:0px; margin:auto"></div>
+			<div class="button-again" style="bottom:90px; right:150px; width:100px; height:87px;"></div>
+		
+		</div>
+		
+		<div class="feedback" id="win" style="background-image:url(../battleships/images/win.jpg);">
+			
+			<div class="score" style="font-size:60px; top:490px; left:0px; right:0px; margin:auto"> </div>
+			<div class="button-again" style="bottom:90px; right:150px; width:100px; height:87px;"></div>
+		
+		</div>
+		
+		<div id="sound" class="sound-icon" style="background-image: url(../battleships/images/sound.png)"></div>
+		<div id="noSound" class="sound-icon" style="background-image: url(../battleships/images/noSound.png);display:none"></div>
+		
+		<script>
+		
+			$(document).ready(function() 
+			{
+				game.init();
+				game.run();
+			});
+		
+		</script>
+	</body>
+</html>
